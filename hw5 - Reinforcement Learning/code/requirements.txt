@@ -1,0 +1,14 @@
+opencv-python==4.8.1.78
+swig==4.2.1
+gymnasium==0.29.1
+gymnasium[atari, accept-rom-license]
+numpy==1.26.4
+matplotlib==3.8.4
+imageio-ffmpeg
+imageio==2.34.1
+torch
+tqdm
+
+# # for CUDA 11.3 torch on Linux
+# --index-url https://download.pytorch.org/whl/cu113; sys_platform == "linux"
+# torch; sys_platform == "linux"
