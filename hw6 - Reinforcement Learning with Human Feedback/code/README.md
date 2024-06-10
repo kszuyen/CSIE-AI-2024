@@ -3,7 +3,7 @@
 ### Assignment Link: [Link](https://docs.google.com/presentation/d/1AqHzkpCJDnuq90Lt9VnfqGenoSApb3RfPeXJGS-PkO0/edit?usp=sharing)
 - Due to environmental issues, I use **"Google Colab Pro"** for this assignment.
 - GPU: **L4 GPU**
-- To reproduce the results, follow **AI_hw6.ipynb** or simply follow the steps below in Google Colab.
+- To reproduce the results, follow **[AI_hw6.ipynb](AI_hw6.ipynb)** or simply follow the steps below in Google Colab.
 
 ## 1. Install Packages
 ```
