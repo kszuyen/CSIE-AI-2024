@@ -5,7 +5,7 @@
 - GPU: **L4 GPU**
 - To reproduce the results, follow **AI_hw6.ipynb** or simply follow the steps below in Google Colab.
 
-## Install Packages
+## 1. Install Packages
 ```
 !pip3 install --no-deps --upgrade transformers==4.41.1 datasets==2.19.1 accelerate==0.30.1 bitsandbytes==0.43.1 trl==0.8.6 peft==0.11.1
 !pip3 install tqdm packaging wandb
@@ -19,7 +19,7 @@ print(torch.__version__)
 print(torch.version.cuda)
 ```
 
-## Install Unsloth
+## 2. Install Unsloth
 ```
 %%capture
 # Installs Unsloth, Xformers (Flash Attention) and all other packages!
@@ -34,31 +34,29 @@ print(torch.version.cuda)
 !python -m bitsandbytes
 ```
 
-## Mount to Google drive, and change directory to the uploaded folder.
+## 3. Mount to Google drive, and change directory to the uploaded folder.
 ```
 from google.colab import drive
 drive.mount('/content/drive/')
 %cd /content/drive/MyDrive/AI2024-hw6
 ```
 
-# Basic Assignments
-
-## Generate text from the selected LLM: unsloth/gemma-2b-bnb-4bit
+## 4. Generate text from the selected LLM: unsloth/gemma-2b-bnb-4bit
 ```
 !bash inference.sh unsloth/gemma-2b-bnb-4bit <wandb_token>
 ```
 
-## Finetune with DPO
+## 5. Finetune with DPO
 ```
 !bash run.sh DPO unsloth/gemma-2b-bnb-4bit <wandb_token> 0.1
 ```
 
-## Fintune with ORPO
+## 6. Fintune with ORPO
 ```
 !bash run.sh ORPO unsloth/gemma-2b-bnb-4bit <wandb_token>
 ```
 
-## Extra Experiments #1
+## 7. Extra Experiments #1
 
 ### Fintune DPO, ORPO with different hyperparameter: beta=0.2
 ```
@@ -66,7 +64,7 @@ drive.mount('/content/drive/')
 !bash run.sh ORPO unsloth/gemma-2b-bnb-4bit <wandb_token> 0.2 beta02
 ````
 
-## Extra Experiments #2
+## 8. Extra Experiments #2
 
 ### Select and compare with different model: "unsloth/tinyllama-bnb-4bit"
 ```
